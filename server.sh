@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-pushd ./public/html/
+pushd ./public/
 python -m SimpleHTTPServer 8000
 popd

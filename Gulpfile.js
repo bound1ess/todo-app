@@ -30,7 +30,7 @@ gulp.task("js", function() {
     util.log("Minifying...");
 
     gulp.src("src/js/*.js")
-        .pipe(minifyJs({mangle: false}))
+        .pipe(minifyJs({mangle: false, compress: false}))
         .pipe(gulp.dest("public/js/"));
 
     util.log("Done!");

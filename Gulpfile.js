@@ -25,6 +25,11 @@ gulp.task("less", function() {
     util.log("Done!");
 });
 
-gulp.task("default", ["html", "less"], function() {
+gulp.task("watch", function() {
+    gulp.watch("src/html/*.html", ["html"]);
+    gulp.watch("src/less/**/*.less", ["less"]);
+});
+
+gulp.task("default", ["html", "less", "watch"], function() {
     util.log("Done!");
 });

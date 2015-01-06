@@ -1,0 +1,22 @@
+{
+    "name": "todo-app",
+    "version": "0.0.0",
+    "description": "Simple ToDo application.",
+    "license": "MIT",
+    "keywords": ["simple", "todo", "application"],
+    "author": {
+        "name": "bound1ess",
+        "email": "bound1ess.dev@gmail.com"
+    },
+    "homepage": "https://github.com/bound1ess/todo-app",
+    "dependencies": {
+        "angular": "latest",
+        "bootstrap": "latest"
+    },
+    "install": {
+        "path": {
+            "css": "public/css",
+            "js": "public/js"
+        }
+    }
+}

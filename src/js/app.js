@@ -14,18 +14,18 @@
         $http.get("/data/tasks.json").success(function(data) {
             service.tasks = data.tasks;
             $rootScope.$broadcast("tasks.update");
+        }).error(function() {
+            alert("Something went terribly wrong!");
         });
 
         return service;
     }]);
 
-    todo.controller("TasksController", ["$scope", "Task", function($scope, task) {
-        $scope.$on("tasks.update", function(event) {
-            $scope.tasks = task.tasks; 
-            console.log($scope.tasks.length);
+    todo.controller("TasksController", ["$scope", "Task", function($scope, Task) {
+        $scope.$on("tasks.update", function() {
+            $scope.tasks = Task.tasks;
         });
 
-        $scope.tasks = task.tasks;
-        console.log($scope.tasks.length);
+        $scope.tasks = Task.tasks;
     }]);
 })();

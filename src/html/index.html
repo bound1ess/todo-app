@@ -8,11 +8,13 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-md-4" ng-controller="TasksController as tasks">
+                <div class="col-md-4" ng-controller="TasksController">
                     <h1>Uncompleted</h1>
                     <hr>
                     <ul class="list-unstyled">
-                        <li ng-repeat="task in tasks.tasks">{{ task.body }}</li>
+                        <li ng-repeat="task in tasks">
+                            {{ task.body }}
+                        </li>
                     </ul>
                 </div>
                 <div class="col-md-4">

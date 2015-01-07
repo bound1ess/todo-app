@@ -3,7 +3,8 @@ var gulp = require("gulp"),
     minifyHtml = require("gulp-minify-html"),
     less = require("gulp-less"),
     minifyCss = require("gulp-minify-css"),
-    minifyJs = require("gulp-uglify");
+    minifyJs = require("gulp-uglify"),
+    autoprefixer = require("gulp-autoprefixer");
 
 gulp.task("html", function() {
     util.log("Minifying...");
@@ -16,10 +17,11 @@ gulp.task("html", function() {
 });
 
 gulp.task("less", function() {
-    util.log("Compiling and minifying...");
+    util.log("Compiling and minifying, autoprefixing...");
 
     gulp.src("src/less/*.less")
         .pipe(less())
+        .pipe(autoprefixer({browsers: ["last 5 versions"]}))
         .pipe(minifyCss({cache: false}))
         .pipe(gulp.dest("public/css/"));
 

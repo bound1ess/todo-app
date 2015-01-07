@@ -42,10 +42,10 @@
         };
     });
 
-    todo.directive("taskCheckbox", function($compile) {
+    todo.directive("taskCheckbox", function() {
         return {
             restrict: "E",
-            template: "<input type=checkbox>",
+            template: "<input type=\"checkbox\" ng-checked=\"task.is_completed\">",
             replace: true
         };
     });

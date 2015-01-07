@@ -8,11 +8,11 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" ng-controller="TasksController as tasks">
                     <h1>Uncompleted</h1>
                     <hr>
-                    <ul>
-                        <!-- <li>Task body [checkbox]</li> -->
+                    <ul class="list-unstyled">
+                        <li ng-repeat="task in tasks.tasks">{{ task.body }}</li>
                     </ul>
                 </div>
                 <div class="col-md-4">

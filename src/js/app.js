@@ -28,4 +28,11 @@
 
         $scope.tasks = Task.tasks;
     }]);
+
+    todo.directive("taskCompletedCheckbox", function() {
+        return {
+            restrict: "E",
+            template: "<input type=checkbox checked=checked/>"     
+        };
+    });
 })();

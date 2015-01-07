@@ -7,11 +7,14 @@ body {
 .task {
     font-size: @task-font-size;
 }
-
 .task-uncompleted {
     color: @task-uncompleted-color;
 }
-
 .task-completed {
     color: @task-completed-color;
+}
+
+input[type=checkbox] {
+    transform: @task-checkbox-size;
+    margin-left: @task-checkbox-offset;
 }

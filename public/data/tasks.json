@@ -1,7 +1,7 @@
 {
     "tasks": [
         {
-            "body": "Write public/data/tasks.json",
+            "body": "Write tasks.json",
             "isCompleted": false
         },
         {

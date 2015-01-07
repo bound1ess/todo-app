@@ -7,7 +7,32 @@
     </head>
     <body>
         <div class="container">
-            Hello, world!
+            <div class="row">
+                <div class="col-md-4">
+                    <h1>Uncompleted</h1>
+                    <hr>
+                    <ul>
+                        <!-- <li>Task body [checkbox]</li> -->
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h1>Add a new task</h1>
+                    <hr>
+                    <form>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">Add</button>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <h1>Completed</h1>
+                    <hr>
+                    <ul>
+                        <!-- <li>Task body [checkbox]</li> -->
+                    </ul>
+                </div>
+            </div>
         </div> 
         <script src="/js/angular/angular.js"></script>
         <script src="/js/app.js"></script>

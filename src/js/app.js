@@ -41,4 +41,12 @@
             replace: true
         };
     });
+
+    todo.directive("taskCheckbox", function($compile) {
+        return {
+            restrict: "E",
+            template: "<input type=checkbox>",
+            replace: true
+        };
+    });
 })();

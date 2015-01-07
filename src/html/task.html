@@ -1,4 +1,4 @@
 <li class="task task-{{ task.is_completed ? 'completed' : 'uncompleted' }}">
-    <p>{{ task.body }}</p>
+    {{task.body}}
     {{ task.is_completed ? 'checked' : 'not checked' }}
 </li>

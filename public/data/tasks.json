@@ -1,0 +1,20 @@
+{
+    "tasks": [
+        {
+            "body": "Write public/data/tasks.json",
+            "isCompleted": false
+        },
+        {
+            "body": "Save it",
+            "isCompleted": true
+        },
+        {
+            "body": "Commit the file",
+            "isCompleted": false
+        },
+        {
+            "body": "And push it to Github",
+            "isCompleted": true
+        }
+    ]
+}

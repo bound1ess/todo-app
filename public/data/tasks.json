@@ -2,19 +2,19 @@
     "tasks": [
         {
             "body": "Write tasks.json",
-            "isCompleted": false
+            "is_completed": false
         },
         {
             "body": "Save it",
-            "isCompleted": true
+            "is_completed": true
         },
         {
             "body": "Commit the file",
-            "isCompleted": false
+            "is_completed": false
         },
         {
             "body": "And push it to Github",
-            "isCompleted": true
+            "is_completed": true
         }
     ]
 }

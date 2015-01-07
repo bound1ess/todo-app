@@ -12,12 +12,7 @@
                     <h1>Uncompleted</h1>
                     <hr>
                     <ul class="list-unstyled">
-                        <li ng-repeat="task in tasks | filter: {isCompleted: false}" 
-                            class="task task-uncompleted"
-                        >
-                            {{ task.body }}
-                            <task-completed-checkbox></task-completed-checkbox>
-                        </li>
+                        <task ng-repeat="task in tasks | filter: {is_completed: false}"></task>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -34,12 +29,7 @@
                     <h1>Completed</h1>
                     <hr>
                     <ul class="list-unstyled">
-                        <li ng-repeat="task in tasks | filter: {isCompleted: true}"
-                            class="task task-completed"
-                        >
-                            {{ task.body }}
-                            <task-completed-checkbox></task-completed-checkbox>
-                        </li>
+                        <task ng-repeat="task in tasks | filter: {is_completed: true}"></task>
                     </ul>
                 </div>
             </div>

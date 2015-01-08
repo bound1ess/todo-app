@@ -1,11 +1,6 @@
 (function() {
     var todo = angular.module("todo", []);
 
-    todo.config(function($sceProvider) {
-        // Since this project is NOT meant to be used in production.
-        $sceProvider.enabled(false);
-    });
-
     todo.service("Task", ["$rootScope", "$http", function($rootScope, $http) {
         var service = {
             tasks: [],

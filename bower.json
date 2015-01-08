@@ -1,7 +1,7 @@
 {
     "name": "todo-app",
     "version": "0.0.0",
-    "description": "Simple ToDo application.",
+    "description": "Simple ToDo application",
     "license": "MIT",
     "keywords": ["simple", "todo", "application"],
     "author": {

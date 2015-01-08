@@ -1,3 +1,3 @@
 # Simple ToDo application
 
-Just me working with Angular, Twitter Bootstrap, Bower, Gulp.
+Just me working with Angular, Bootstrap, Express, Bower, Gulp.

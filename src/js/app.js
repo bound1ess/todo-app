@@ -11,7 +11,7 @@
             }
         };
 
-        $http.get("/data/tasks.json").success(function(data) {
+        $http.get("/public/data/tasks.json").success(function(data) {
             service.tasks = data.tasks;
             $rootScope.$broadcast("tasks.update");
         }).error(function() {
@@ -43,7 +43,7 @@
     todo.directive("task", function() {
         return {
             restrict: "E",
-            templateUrl: "/task.html",
+            templateUrl: "/public/task.html",
             replace: true
         };
     });
@@ -51,7 +51,7 @@
     todo.directive("newTask", function() {
         return {
             restrict: "E",
-            templateUrl: "/new-task.html",
+            templateUrl: "/public/new-task.html",
             replace: true
         };
     });

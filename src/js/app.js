@@ -47,8 +47,7 @@
     todo.directive("newTask", function() {
         return {
             restrict: "E",
-            template: "<li ng-show=\"newTask.length\" class=\"task task-uncompleted\">"
-                + "{{ newTask }}<input type=\"checkbox\"></li>",
+            templateUrl: "/new-task.html",
             replace: true
         };
     });

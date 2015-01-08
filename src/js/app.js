@@ -34,6 +34,10 @@
             Task.addTask({body: $scope.newTask, is_completed: false});
             $scope.newTask = "";
         };
+
+        $scope.changeTaskState = function(index) {
+            $scope.tasks[index].is_completed = !$scope.tasks[index].is_completed;
+        };
     }]);
 
     todo.directive("task", function() {

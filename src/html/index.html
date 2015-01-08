@@ -18,9 +18,9 @@
                 <div class="col-md-4">
                     <h1>Add a new task</h1>
                     <hr>
-                    <form>
+                    <form ng-submit="addTask()">
                         <div class="form-group">
-                            <textarea class="form-control" rows="5"></textarea>
+                            <textarea class="form-control" ng-model="newTask"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg">Add</button>
                     </form>

@@ -27,6 +27,13 @@
         });
 
         $scope.tasks = Task.tasks;
+
+        $scope.newTask = "";
+
+        $scope.addTask = function() {
+            Task.addTask({body: $scope.newTask, is_completed: false});
+            $scope.newTask = "";
+        };
     }]);
 
     todo.directive("task", function() {

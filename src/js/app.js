@@ -31,12 +31,12 @@
         $scope.newTask = "";
 
         $scope.addTask = function() {
-            Task.addTask({body: $scope.newTask, is_completed: false});
+            Task.addTask({body: $scope.newTask, isCompleted: false});
             $scope.newTask = "";
         };
 
         $scope.changeTaskState = function(index) {
-            $scope.tasks[index].is_completed = !$scope.tasks[index].is_completed;
+            $scope.tasks[index].isCompleted = !$scope.tasks[index].isCompleted;
         };
     }]);
 

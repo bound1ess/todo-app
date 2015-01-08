@@ -19,9 +19,9 @@
                 <div class="col-md-4">
                     <h1>Add a new task</h1>
                     <hr>
-                    <form ng-submit="addTask()">
-                        <div class="form-group">
-                            <textarea class="form-control" ng-model="newTask"></textarea>
+                    <form name="newTaskForm" ng-submit="newTaskForm.$valid && addTask()" novalidate>
+                        <div class="form-group" ng-class="{'has-error': newTaskForm.$invalid}">
+                            <textarea class="form-control" ng-model="newTask" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg">Add</button>
                     </form>

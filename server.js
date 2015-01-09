@@ -25,5 +25,9 @@ app.post("/tasks/add", function(request, response) {
     response.send("OK");
 });
 
+app.post("/tasks/update", function(request, response) {
+    console.log("OK, got the request.");
+});
+
 console.log("Listening on localhost:8888...");
 app.listen(8888);

@@ -1,4 +1,4 @@
 <li class="task task-{{ task.isCompleted ? 'completed' : 'uncompleted' }}">
     {{task.body}}
-    <input type="checkbox" ng-model="task.isCompleted" ng-changed="changeTaskState($index)">
+    <input type="checkbox" ng-model="task.isCompleted" ng-change="onTaskChange($index)">
 </li>

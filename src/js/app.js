@@ -20,9 +20,7 @@
                 });
             },
 
-            changeState: function(index) {
-                //service.tasks[index].isCompleted = !service.tasks[index].isCompleted;
-
+            onChange: function(index) {
                 $http({
                     url: window.location.href + "tasks/update",
                     method: "post",
@@ -59,9 +57,8 @@
             $scope.newTask = "";
         };
 
-        $scope.changeTaskState = function(index) {
-            Task.changeState(index);
-            console.log("Something has changed!");
+        $scope.onTaskChange = function(index) {
+            Task.onChange(index);
         };
     }]);
 

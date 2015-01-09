@@ -17,7 +17,7 @@ app.post("/tasks/add", function(request, response) {
             tasks = JSON.parse(data).tasks;
         }
 
-        tasks.push({body: request.body.body, isCompleted: false});
+        tasks.push(request.body);
         fs.writeFile(tasksFile, JSON.stringify({tasks: tasks}, null, 4), "utf8");
     });
 

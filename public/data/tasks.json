@@ -1,18 +1,22 @@
 {
     "tasks": [
         {
+            "id": 1,
             "body": "Write tasks.json",
             "isCompleted": false
         },
         {
+            "id": 2,
             "body": "Save it",
             "isCompleted": true
         },
         {
+            "id": 3,
             "body": "Commit the file",
             "isCompleted": false
         },
         {
+            "id": 4,
             "body": "And push it to Github",
             "isCompleted": true
         }

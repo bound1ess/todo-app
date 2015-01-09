@@ -2,7 +2,7 @@ var express = require("express"), app = express();
 var fs = require("fs"), bodyParser = require("body-parser");
 
 app.use("/public", express.static(__dirname + "/public"));
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json({extended: false}));
 
 app.get("/", function(request, response) {
     response.sendFile(__dirname + "/public/index.html");
@@ -16,9 +16,8 @@ app.post("/tasks/add", function(request, response) {
             tasks = JSON.parse(data).tasks;
         }
 
-        tasks.push({body: request.param("body"), isCompleted: false});
-        console.log(request);
-        //fs.writeFile(tasksFile, JSON.stringify(tasks), "utf8");
+        tasks.push({body: request.body.body, isCompleted: false});
+        fs.writeFile(tasksFile, JSON.stringify({tasks: tasks}, null, 4), "utf8");
     });
 
     response.send("OK");

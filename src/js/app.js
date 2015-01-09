@@ -10,9 +10,11 @@
                 $rootScope.$broadcast("tasks.update");
 
                 $http({
-                    url: "/tasks/add",
-                    method: "POST",
-                    data: task
+                    url: window.location.href + "tasks/add",
+                    method: "post",
+                    data: {
+                        body: task.body
+                    }
                 }).error(function() {
                     console.log("Was unable to send the task to the server!");
                 });

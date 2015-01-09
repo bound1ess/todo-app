@@ -2,6 +2,8 @@ var express = require("express"), app = express();
 var fs = require("fs"), bodyParser = require("body-parser");
 
 app.use("/public", express.static(__dirname + "/public"));
+//app.use("/src/", express.static(__dirname + "/src"));
+
 app.use(bodyParser.json({extended: false}));
 
 app.get("/", function(request, response) {
@@ -23,4 +25,5 @@ app.post("/tasks/add", function(request, response) {
     response.send("OK");
 });
 
-app.listen(8000);
+console.log("Listening on localhost:8888...");
+app.listen(8888);

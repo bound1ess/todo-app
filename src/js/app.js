@@ -8,6 +8,14 @@
             addTask: function(task) {
                 service.tasks.push(task);
                 $rootScope.$broadcast("tasks.update");
+
+                $http({
+                    url: "/tasks/add",
+                    method: "POST",
+                    data: task
+                }).error(function() {
+                    console.log("Was unable to send the task to the server!");
+                });
             }
         };
 

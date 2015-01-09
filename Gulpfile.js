@@ -47,3 +47,12 @@ gulp.task("watch", function() {
 gulp.task("default", ["html", "less", "js", "watch"], function() {
     util.log("Done!");
 });
+
+gulp.task("data", function() {
+    util.log("Copying src/data into public/data...");
+
+    gulp.src("src/data/*.json")
+        .pipe(gulp.dest("public/data/"));
+
+    util.log("Done!");
+});

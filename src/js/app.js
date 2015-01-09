@@ -18,6 +18,10 @@
                 }).error(function() {
                     console.log("Was unable to send the task to the server!");
                 });
+            },
+
+            changeState: function(index) {
+                service.tasks[index].isCompleted = !service.tasks[index].isCompleted;
             }
         };
 
@@ -46,7 +50,7 @@
         };
 
         $scope.changeTaskState = function(index) {
-            $scope.tasks[index].isCompleted = !$scope.tasks[index].isCompleted;
+            Task.changeState(index);
         };
     }]);
 

@@ -131,7 +131,7 @@ To help me with writing documentation.
 - `html/index.html` [documented]
 - `html/task.html` [documented]
 - `html/new-task.html` [documented]
-- `js/app.js` [work in progress]
+- `js/app.js` [documented]
 - `less/import/variables.less` [documented]
 - `less/main.less` [documented]
 

@@ -122,7 +122,7 @@ To help me with writing documentation.
 - `package.json` [self-explanatory]
 - `bower.json` [self-explanatory]
 - `Gulpfile.js` [documented]
-- `server.js` [work in progress]
+- `server.js` [documented]
 - `Rakefile` [documented]
 
 ### Source folder

@@ -1,6 +1,6 @@
 # Simple ToDo application
 
-Just me working with Angular, Bootstrap, Express, Bower, Gulp.
+Just me practicing with Angular, Bootstrap, Express, Bower, Gulp.
 
 ## How to install and run
 
@@ -26,7 +26,11 @@ curl -sL https://deb.nodesource.com/setup | sudo bash -
 sudo apt-get install -y nodejs
 ```
 
+
+#### Useful links
+
 Visit [this wiki page](https://github.com/joyent/node/wiki/installing-node.js-via-package-manager) for more information.
+
 
 Or you can always build Node.js from source code:
 
@@ -37,7 +41,11 @@ make
 sudo make install
 ```
 
+
+#### Useful links
+
 Visit [this wiki page](https://github.com/joyent/node/wiki/installation#building-on-linux) for more information.
+
 
 ### Clone the repository
 
@@ -73,16 +81,27 @@ gem install rake
 rake --version
 ```
 
+
+#### Useful links
+
 Visit [ruby-lang.org](https://www.ruby-lang.org/en/) for more information about Ruby.
+
 Visit [rvm.io](http://rvm.io/) for more information about Ruby Version Manager (RVM).
+
 Visit [rubygems.org](https://rubygems.org/gems/rake) for more information about Rake.
+
 
 Now the final step, assuming that you are in `todo-app` directory:
 
 ```shell
 rake install
 rake server
+
+# Now you can visit http://localhost:8000 in your browser.
 ```
+
+
+#### Troubleshooting
 
 If you are getting `command not found: bower-installer` error or something like that, make sure to edit your `.bashrc` file (or `.zshrc` or whatever) and add this line:
 
@@ -92,9 +111,9 @@ export PATH=$PATH:~/.node/bin
 
 Then reload the terminal and try again.
 
-## Documentation
+## Documentation checklist
 
-Checklist to help me with writing documentation.
+To help me with writing documentation.
 
 ### Project folder
 
@@ -118,4 +137,4 @@ Checklist to help me with writing documentation.
 
 ## License
 
-The MIT license.
+The MIT license (see the `LICENSE` file for more details).

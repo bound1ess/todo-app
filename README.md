@@ -128,9 +128,9 @@ To help me with writing documentation.
 ### Source folder
 
 - `data/tasks.json` [self-explanatory]
-- `html/index.html` [work in progress]
-- `html/task.html` [work in progress]
-- `html/new-task.html` [work in progress]
+- `html/index.html` [documented]
+- `html/task.html` [documented]
+- `html/new-task.html` [documented]
 - `js/app.js` [work in progress]
 - `less/import/variables.less` [documented]
 - `less/main.less` [documented]

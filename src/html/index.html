@@ -3,12 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <title>Simple ToDo application</title>
+
+        <!-- Unlike JS files, CSS will be included right at the top of the page. -->
         <link rel="stylesheet" href="/public/css/bootstrap/bootstrap.css">
         <link rel="stylesheet" href="/public/css/main.css">
     </head>
+
     <body>
         <div class="container">
             <div class="row" ng-controller="TasksController">
+                <!-- The first column. -->
+                <!-- Tasks that were marked as "uncompleted" will be displayed here. -->
                 <div class="col-md-4">
                     <h1>Uncompleted</h1>
                     <hr>
@@ -17,6 +22,9 @@
                         <new-task></new-task>
                     </ul>
                 </div>
+
+                <!-- The second column. -->
+                <!-- Here will be displayed the new task form. -->
                 <div class="col-md-4">
                     <h1>Add a new task</h1>
                     <hr>
@@ -27,6 +35,9 @@
                         <button type="submit" class="btn btn-primary btn-lg">Add</button>
                     </form>
                 </div>
+
+                <!-- The third column. -->
+                <!-- Tasks that were marked as "completed" will be displayed here. -->
                 <div class="col-md-4">
                     <h1>Completed</h1>
                     <hr>
@@ -35,7 +46,10 @@
                     </ul>
                 </div>
             </div>
-        </div> 
+        </div>
+
+        <!-- We place <script> tags at the end of the file so pages load faster. -->
+        <!-- This page is actually very small, but it is still a good practice. -->
         <script src="/public/js/angular/angular.js"></script>
         <script src="/public/js/app.js"></script>
     </body>

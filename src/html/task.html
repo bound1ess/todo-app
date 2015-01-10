@@ -1,4 +1,8 @@
+<!-- This is the template for the "task" directive (see src/js/app.js). -->
+
+<!-- Depending on the value of task.isCompleted, it is task-completed or task-uncompleted. -->
 <li class="task task-{{ task.isCompleted ? 'completed' : 'uncompleted' }}">
     {{task.body}}
+    <!-- When task.isCompleted value is changed, onTaskChange(task.id) will be called. -->
     <input type="checkbox" ng-model="task.isCompleted" ng-change="onTaskChange(task.id)">
 </li>

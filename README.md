@@ -123,7 +123,7 @@ To help me with writing documentation.
 - `bower.json` [self-explanatory]
 - `Gulpfile.js` [work in progress]
 - `server.js` [work in progress]
-- `Rakefile` [work in progress]
+- `Rakefile` [documented]
 
 ### Source folder
 

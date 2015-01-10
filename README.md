@@ -121,7 +121,7 @@ To help me with writing documentation.
 - `LICENSE` [self-explanatory]
 - `package.json` [self-explanatory]
 - `bower.json` [self-explanatory]
-- `Gulpfile.js` [work in progress]
+- `Gulpfile.js` [documented]
 - `server.js` [work in progress]
 - `Rakefile` [documented]
 

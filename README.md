@@ -2,6 +2,8 @@
 
 Just me practicing with Angular, Bootstrap, Express, Bower, Gulp.
 
+![](http://i.imgur.com/HIbrkLP.png)
+
 ## How to install and run
 
 Follow these steps:

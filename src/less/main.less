@@ -1,9 +1,12 @@
+// All values are stored there (for simplicity).
 @import (less) "import/variables.less";
 
 body {
+    // Properly place the page content.
     padding: @page-offset;
 }
 
+// These are for tasks (see "task" and "newTask" directives and their respective templates).
 .task {
     font-size: @task-font-size;
 }
@@ -14,6 +17,7 @@ body {
     color: @task-completed-color;
 }
 
+// This one is for checkboxes.
 input[type=checkbox] {
     transform: @task-checkbox-size;
     margin-left: @task-checkbox-offset;

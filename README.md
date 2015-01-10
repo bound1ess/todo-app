@@ -132,8 +132,8 @@ To help me with writing documentation.
 - `html/task.html` [work in progress]
 - `html/new-task.html` [work in progress]
 - `js/app.js` [work in progress]
-- `less/import/variables.less` [work in progress]
-- `less/main.less` [work in progress]
+- `less/import/variables.less` [documented]
+- `less/main.less` [documented]
 
 ## License
 

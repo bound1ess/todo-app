@@ -108,10 +108,10 @@ rake server
 If you are getting `command not found: bower-installer` error or something like that, make sure to edit your `.bashrc` file (or `.zshrc` or whatever) and add this line:
 
 ```shell
-export PATH=$PATH:~/.node/bin
+export PATH=$PATH:node_modules/.bin
 ```
 
-Then reload the terminal and try again.
+Then reload the terminal (or simply `source` the configuration file) and try again.
 
 ## Documentation checklist
 
@@ -129,7 +129,7 @@ To help me with writing documentation.
 
 ### Source folder
 
-- `server.js` [documented]
+- `app.js` [documented]
 - `data/tasks.json` [self-explanatory]
 - `html/index.html` [documented]
 - `html/task.html` [documented]

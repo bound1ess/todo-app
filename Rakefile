@@ -24,3 +24,12 @@ task :server do
     # Which you can later get access to by visiting http://localhost:8000.
     sh "node server.js"
 end
+
+# rake test
+# This task runs application tests.
+# Mocha.js is being used here.
+task :test do
+    # This command tells Mocha to run the tests, also passing a couple of options.
+    # See http://mochajs.org/.
+    sh "mocha --reporter=spec --slow=250"
+end

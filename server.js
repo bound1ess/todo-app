@@ -1,5 +1,5 @@
-// The actual server code is stored in the source directory.
-var app = require("./src/server")();
+// The actual application code is stored in the source directory.
+var app = require("./src/app")();
 
 // Display a user-friendly message.
 console.log("Listening on localhost:8000...");

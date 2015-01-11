@@ -26,18 +26,12 @@ app.post("/tasks/add", function(request, response) {
     var tasks;
 
     // Not much to say here, see http://nodejs.org/api/fs.html.
-    fs.readFile(tasksFile, "utf8", function(error, data) {
-        if (error !== null) {
-            return false;
-        }
+    tasks = JSON.parse(fs.readFileSync(tasksFile, "utf8")).tasks
+    tasks.push(request.body);
 
-        tasks = JSON.parse(data).tasks;
-        tasks.push(request.body);
-
-        // See the link above.
-        // + stackoverflow.com/questions/4810841/how-can-i-pretty-print-json-using-javascript
-        fs.writeFile(tasksFile, JSON.stringify({tasks: tasks}, null, 4), "utf8");
-    });
+    // See the link above.
+    // + stackoverflow.com/questions/4810841/how-can-i-pretty-print-json-using-javascript
+    fs.writeFile(tasksFile, JSON.stringify({tasks: tasks}, null, 4), "utf8");
 
     // No matter what is going to happen, we send "OK" anyway.
     response.send("OK");
@@ -49,22 +43,16 @@ app.post("/tasks/update", function(request, response) {
     var taskId = parseInt(request.body.id) - 1, tasks;
     
     // Not much to say here, see http://nodejs.org/api/fs.html.
-    fs.readFile(tasksFile, "utf8", function(error, data) {
-        if (error !== null) {
-            return false;
-        }
+    tasks = JSON.parse(fs.readFileSync(tasksFile, "utf8")).tasks;
 
-        tasks = JSON.parse(data).tasks;
-
-        // One more if-check just to ensure everything is OK.
-        if (tasks[taskId] !== undefined) {
-            tasks[taskId].isCompleted = !tasks[taskId].isCompleted;
-        }
+    // Perform a quick check just to ensure everything is OK.
+    if (tasks[taskId] !== undefined) {
+        tasks[taskId].isCompleted = !tasks[taskId].isCompleted;
+    }
         
-        // See the link above.
-        // + stackoverflow.com/questions/4810841/how-can-i-pretty-print-json-using-javascript
-        fs.writeFile(tasksFile, JSON.stringify({tasks: tasks}, null, 4), "utf8");
-    });
+    // See the link above.
+    // + stackoverflow.com/questions/4810841/how-can-i-pretty-print-json-using-javascript
+    fs.writeFile(tasksFile, JSON.stringify({tasks: tasks}, null, 4), "utf8");
 
     // No matter what is going to happen, we send "OK" anyway.
     response.send("OK");

@@ -129,6 +129,7 @@ To help me with writing documentation.
 
 ### Source folder
 
+- `server.js` [documented]
 - `data/tasks.json` [self-explanatory]
 - `html/index.html` [documented]
 - `html/task.html` [documented]

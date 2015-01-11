@@ -42,4 +42,25 @@ describe("ToDo application", function() {
                 });
         });
     });
+
+    describe("POST /tasks/update", function() {
+        it("should receive a POST request and update the tasks file", function(done) {
+            var taskId = 0, currentState = getTasks()[taskId].isCompleted;
+
+            request(app)
+                .post("/tasks/update")
+                .send({id: taskId + 1})
+                .expect("OK")
+                .expect(200)
+                .end(function(error) {
+                    if (error) {
+                        return done(error);
+                    }
+
+                    assert.notEqual(currentState, getTasks()[taskId].isCompleted);
+
+                    done();
+                });
+        });
+    });
 });

@@ -1,14 +1,15 @@
 describe("ToDo application", function() {
     var Task, controller, scope;
-    var $httpBackend;
+    var $httpBackend, $compile;
 
     beforeEach(module("todo"));
 
     // Leading and trailing underscores will be stripped away.
-    beforeEach(inject(function(_Task_, _$httpBackend_, $controller, $rootScope) {
+    beforeEach(inject(function(_Task_, _$httpBackend_, _$compile_, $controller, $rootScope) {
         Task = _Task_;
 
         $httpBackend = _$httpBackend_;
+        $compile = _$compile_;
 
         controller = $controller("TasksController", {
             $scope: (scope = $rootScope.$new())
@@ -86,5 +87,30 @@ describe("ToDo application", function() {
 
             $httpBackend.flush();
         });
+    });
+
+    describe("Task directive", function() {
+        it("builds a proper view", function() {
+            var element;
+
+            scope.tasks.push({
+                id: 1,
+                body: "Sample task",
+                isCompleted: false
+            });
+
+            $httpBackend
+                .expectGET("/public/task.html")
+                .respond(200, "<li>{{task.body}}</li>");
+
+            element = $compile("<task ng-repeat=\"task in tasks\"></task>")(scope);
+            scope.$digest();
+
+            $httpBackend.flush();
+        });
+    });
+
+    describe("NewTask directive", function() {
+
     });
 });

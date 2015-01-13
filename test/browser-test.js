@@ -1,11 +1,13 @@
 describe("ToDo application", function() {
     var Task, controller, scope;
+    var $httpBackend;
 
     beforeEach(module("todo"));
 
     // Leading and trailing underscores will be stripped away.
     beforeEach(inject(function(_Task_, _$httpBackend_, $controller, $rootScope) {
         Task = _Task_;
+
         $httpBackend = _$httpBackend_;
 
         controller = $controller("TasksController", {
@@ -85,5 +87,4 @@ describe("ToDo application", function() {
             $httpBackend.flush();
         });
     });
-
 });

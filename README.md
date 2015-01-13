@@ -1,6 +1,6 @@
 # Simple ToDo application
 
-Just me practicing with Angular, Bootstrap, Express, Bower, Gulp.
+Just me practicing with Angular, Bootstrap, Express, Bower, Gulp, Karma.
 
 ![](http://i.imgur.com/HIbrkLP.png)
 
@@ -97,8 +97,11 @@ Now the final step, assuming that you are in `todo-app` directory:
 
 ```shell
 rake install
-rake server
 
+# Want to run tests?
+rake test test-in-browser
+
+rake server
 # Now you can visit http://localhost:8000 in your browser.
 ```
 
@@ -112,31 +115,6 @@ export PATH=$PATH:node_modules/.bin
 ```
 
 Then reload the terminal (or simply `source` the configuration file) and try again.
-
-## Documentation checklist
-
-To help me with writing documentation.
-
-### Project folder
-
-- `README.md` [self-explanatory]
-- `LICENSE` [self-explanatory]
-- `package.json` [self-explanatory]
-- `bower.json` [self-explanatory]
-- `Gulpfile.js` [documented]
-- `server.js` [documented]
-- `Rakefile` [documented]
-
-### Source folder
-
-- `app.js` [documented]
-- `data/tasks.json` [self-explanatory]
-- `html/index.html` [documented]
-- `html/task.html` [documented]
-- `html/new-task.html` [documented]
-- `js/app.js` [documented]
-- `less/import/variables.less` [documented]
-- `less/main.less` [documented]
 
 ## License
 

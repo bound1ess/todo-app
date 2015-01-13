@@ -111,6 +111,16 @@ describe("ToDo application", function() {
     });
 
     describe("NewTask directive", function() {
+        it("builds a proper view", function() {
+            var element;
 
+            $httpBackend
+                .expectGET("/public/new-task.html")
+                .respond(200, "<li>{{newTask}}</li>");
+
+            element = $compile("<new-task></new-task>")(scope);
+           
+            $httpBackend.flush();
+        });
     });
 });

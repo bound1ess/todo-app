@@ -27,11 +27,13 @@ end
 
 # rake test
 # This task runs application tests.
-# Mocha.js is being used here.
+# Mocha.js and Karma are being used here.
 task :test do
     # This command tells Gulp to run the task called "data" (described in Gulpfile.js).
     sh "gulp data"
-    # This command tells Mocha to run the tests, while also passing a couple of options.
+    # This command tells Mocha to run the server tests, while also passing a couple of options.
     # See http://mochajs.org/.
-    sh "mocha --reporter=spec --slow=500"
+    sh "mocha --reporter=spec --slow=500 test/server-test.js"
+    # This command tells Karma to boot up a server and run the tests.
+    sh "karma start"
 end

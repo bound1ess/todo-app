@@ -4,15 +4,32 @@ describe("Task", function() {
     beforeEach(module("todo"));
 
     // Leading and trailing underscores will be stripped away.
-    beforeEach(inject(function(_Task_) {
+    beforeEach(inject(function(_Task_, _$httpBackend_) {
         Task = _Task_;
+        $httpBackend = _$httpBackend_;
+
+        $httpBackend
+            .expectGET("/public/data/tasks.json")
+            .respond(200, JSON.stringify({tasks: []}));
+
+        $httpBackend.flush();
     }));
 
     describe("#addTask()", function() {
         it("adds a task", function() {
             expect(Task.tasks).to.be.empty();
 
+            $httpBackend
+                .expectPOST("/tasks/add", {
+                    id: 1,
+                    body: "Sample task",
+                    isCompleted: false
+                })
+                .respond(200, "OK");
+
             Task.addTask("Sample task");
+
+            $httpBackend.flush();
             
             expect(Task.tasks).to.not.be.empty();
             expect(Task.tasks).to.have.length(1);

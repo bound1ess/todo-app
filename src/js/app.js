@@ -21,7 +21,7 @@
 
                 // Perform an AJAX POST request.
                 $http({
-                    url: window.location.href + "tasks/add",
+                    url: "/tasks/add",
                     method: "post",
                     data: task
                 }).error(function() {
@@ -32,7 +32,7 @@
             onChange: function(id) {
                 // Perform an AJAX POST request.
                 $http({
-                    url: window.location.href + "tasks/update",
+                    url: "/tasks/update",
                     method: "post",
                     data: {
                         id: id

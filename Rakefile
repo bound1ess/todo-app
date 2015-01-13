@@ -10,7 +10,7 @@ task :install do
     # See https://www.npmjs.com/package/bower-installer for more information.
     sh "bower-installer"
     # This command removes files (and directories) that we do not need.
-    sh "rm -r glyph* bootstrap.less public/jquery/ public/js/jquery/ public/js/bootstrap/"
+    sh "rm -r glyph* bootstrap.less public/js/jquery/ public/js/bootstrap/"
     # This command tells Gulp.js to run 4 tasks: less, js, html, data.
     # See Gulpfile.js for detailed information about these.
     sh "gulp less js html data"

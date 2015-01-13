@@ -11,6 +11,7 @@
     "homepage": "https://github.com/bound1ess/todo-app",
     "dependencies": {
         "angular": "latest",
+        "angular-mocks": "latest",
         "bootstrap": "latest"
     },
     "install": {

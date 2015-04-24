@@ -37,12 +37,12 @@ describe("ToDo application", function() {
             Task.addTask("Sample task");
 
             $httpBackend.flush();
-            
+
             expect(Task.tasks).to.not.be.empty();
             expect(Task.tasks).to.have.length(1);
 
             expect(Task.tasks[0]).to.be.an("object");
-            
+
             expect(Task.tasks[0].id).to.equal(1);
             expect(Task.tasks[0].body).to.equal("Sample task");
             expect(Task.tasks[0].isCompleted).to.be.false();
@@ -82,7 +82,7 @@ describe("ToDo application", function() {
                     id: 1
                 })
                 .respond(200, "OK");
-        
+
             scope.onTaskChange(1);
 
             $httpBackend.flush();
@@ -119,7 +119,7 @@ describe("ToDo application", function() {
                 .respond(200, "<li>{{newTask}}</li>");
 
             element = $compile("<new-task></new-task>")(scope);
-           
+
             $httpBackend.flush();
         });
     });

@@ -18,7 +18,7 @@ var gulp = require("gulp"),
 // The result will be stored in public/.
 gulp.task("html", function() {
     util.log("Minifying...");
-    
+
     gulp.src("src/html/*.html")
         .pipe(minifyHtml({}))
         .pipe(gulp.dest("public/"));

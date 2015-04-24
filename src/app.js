@@ -41,7 +41,7 @@ app.post("/tasks/add", function(request, response) {
 app.post("/tasks/update", function(request, response) {
     // The first element of an array has the index of 0, not 1, right?
     var taskId = parseInt(request.body.id) - 1, tasks;
-    
+
     // Not much to say here, see http://nodejs.org/api/fs.html.
     tasks = JSON.parse(fs.readFileSync(tasksFile, "utf8")).tasks;
 
@@ -49,7 +49,7 @@ app.post("/tasks/update", function(request, response) {
     if (tasks[taskId] !== undefined) {
         tasks[taskId].isCompleted = !tasks[taskId].isCompleted;
     }
-        
+
     // See the link above.
     // + stackoverflow.com/questions/4810841/how-can-i-pretty-print-json-using-javascript
     fs.writeFile(tasksFile, JSON.stringify({tasks: tasks}, null, 4), "utf8");

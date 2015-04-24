@@ -4,7 +4,7 @@ var fs = require("fs"), getTasks = function() {
     var tasksFile = __dirname + "/../public/data/tasks.json";
 
     // Checking for possible errors would not be a bad idea, but this will do (for now).
-    return JSON.parse(fs.readFileSync(tasksFile, "utf8")).tasks;    
+    return JSON.parse(fs.readFileSync(tasksFile, "utf8")).tasks;
 };
 
 describe("ToDo application", function() {
@@ -36,7 +36,7 @@ describe("ToDo application", function() {
 
                     assert.equal(task.id, lastTask.id);
                     assert.equal(task.body, lastTask.body);
-                    assert.equal(task.isCompleted, lastTask.isCompleted);                    
+                    assert.equal(task.isCompleted, lastTask.isCompleted);
 
                     done();
                 });

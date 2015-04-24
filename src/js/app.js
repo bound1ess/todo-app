@@ -6,7 +6,7 @@
     todo.service("Task", ["$rootScope", "$http", function($rootScope, $http) {
         var service = {
             tasks: [],
-            
+
             addTask: function(taskBody) {
                 // Set all fields with proper values.
                 var task = {
@@ -42,7 +42,7 @@
                 });
             }
         };
-    
+
         // Perform an AJAX GET request.
         $http.get("/public/data/tasks.json").success(function(data) {
             service.tasks = data.tasks;

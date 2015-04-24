@@ -21,7 +21,7 @@ node -v && npm -v
 
 *As for now, Node.js comes with NPM so you only need to install Node.js itself.*
 
-If you are using Ubuntu, you can install it using `apt-get`: 
+If you are using Ubuntu, you can install it using `apt-get`:
 
 ```shell
 curl -sL https://deb.nodesource.com/setup | sudo bash -
